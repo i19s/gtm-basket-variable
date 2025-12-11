@@ -13,13 +13,13 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Basket -\u003e i19s Basket",
-  "description": "Converts a Basket to a i19s Basket",
+  "displayName": "i19s GTM Basket Variable",
+  "description": "Converts a Basket to the i19s format",
   "containerContexts": [
     "WEB"
   ],
   "brand": {
-    "displayName": "Basket to a i19s Basket"
+    "displayName": "i19s GTM Basket Variable"
   }
 }
 
@@ -138,7 +138,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
     var logToConsole = require('logToConsole');
 
-    
+
         function transformProducts(unparsedProducts, brand_name_name, discount_value_name, name_name, position_order_number_name, position_uuid_name, product_category_name, product_id_name, product_price_name, quantity_name, shipping_costs_name, stock_keeping_unit_name, tax_name, tracking_category_name) {
             var parsedProducts = unparsedProducts.map(function (entry, index) {
                 var basketEntry = {
@@ -173,7 +173,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
         var transformedProducts = transformProducts(products, getDataValue('brand_name'), getDataValue('discount_value'), getDataValue('name'), getDataValue('position_order_number'), getDataValue('position_uuid'), getDataValue('product_category'), getDataValue('product_id'), getDataValue('product_price'), getDataValue('quantity'), getDataValue('shipping_costs'), getDataValue('stock_keeping_unit'), getDataValue('tax'), getDataValue('tracking_category'));
         logToConsole('transformedProducts ' + transformedProducts);
         return transformedProducts;
-    
+
 
 
 
